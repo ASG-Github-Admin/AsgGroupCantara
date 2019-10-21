@@ -1,3 +1,5 @@
+Start-Sleep -Seconds 0
+
 # Classes file collection
 $Classes = @(Get-ChildItem -Path "$PSScriptRoot\Classes\*.ps1" -File -ErrorAction SilentlyContinue)
 
