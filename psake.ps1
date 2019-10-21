@@ -82,7 +82,7 @@ Task Test -Depends Check {
 # Module loaded, read the exported functions, update the '.psd1' manifest file 'FunctionsToExport' value
 Task Build -Depends Test {
 
-    Write-Output -InputObject $Lines
+    Write-Host -Object $Lines
 
     Set-ModuleFunction
 
