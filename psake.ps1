@@ -84,7 +84,7 @@ Task Build -Depends Test {
 
     Write-Output -InputObject $Lines
 
-    Set-ModuleFunction -Name $ENV:BHPSModulePath
+    Set-ModuleFunction -Name "$ENV:BHPSModulePath.psm1"
 
     # Module version bumped
     # try {
