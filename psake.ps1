@@ -82,22 +82,22 @@ Task Test -Depends Check {
 # Module loaded, read the exported functions, update the '.psd1' manifest file 'FunctionsToExport' value
 Task Build -Depends Test {
 
-    Write-Host -Object $Lines
+    Write-Output -InputObject $Lines
 
-    Set-ModuleFunction
+    Set-ModuleFunction -Name $ENV:BHPSModulePath
 
     # Module version bumped
-    try {
+    # try {
 
-        $Ver = Get-NextNugetPackageVersion -Name $ENV:BHProjectName -ErrorAction Stop
-        Update-Metadata -Path $ENV:BHPSModuleManifest -PropertyName ModuleVersion -Value $Ver -ErrorAction Stop
-    }
-    catch {
+    #     $Ver = Get-NextNugetPackageVersion -Name $ENV:BHProjectName -ErrorAction Stop
+    #     Update-Metadata -Path $ENV:BHPSModuleManifest -PropertyName ModuleVersion -Value $Ver -ErrorAction Stop
+    # }
+    # catch {
 
-        "Failed to update version for '$ENV:BHProjectName': $PSItem.`nContinuing with existing version" |
-        Write-Output
-    }
-    Write-Output -InputObject "`n"
+    #     "Failed to update version for '$ENV:BHProjectName': $PSItem.`nContinuing with existing version" |
+    #     Write-Output
+    # }
+    # Write-Output -InputObject "`n"
 }
 
 # Module deployment
