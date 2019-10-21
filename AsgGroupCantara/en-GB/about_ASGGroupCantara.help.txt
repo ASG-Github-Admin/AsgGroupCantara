@@ -1,14 +1,14 @@
 PSTOPIC
-    about_AsgGroup
+    about_AsgGroupCantara
 
 
 SHORT DESCRIPTION
-    AsgGroup assists in performing certain generic tasks within PowerShell using functions.
+    AsgGroupCantara assists in performing Cantara tasks using PowerShell functions.
 
 
 LONG DESCRIPTION
-    AsgGroup provides assistance in performing generic tasks within PowerShell, with the help of advanced functions.
+    AsgGroupCantara assists in performing Cantara tasks within PowerShell, with the help of advanced functions.
 
 
 DETAILED DESCRIPTION
-    This module helps in performing certain generic tasks that are sometimes required within PowerShell, such as the creation of encrypted password files and utilising them in creating credential objects.
+    This module helps in performing Cantara tasks using PowerShell, such as connecting to the a Cantara ReST API and get the status of a scheduler.
