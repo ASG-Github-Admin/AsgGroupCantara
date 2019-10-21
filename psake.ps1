@@ -86,7 +86,7 @@ Task Build -Depends Test {
 
     Set-ModuleFunction -Name "$ENV:BHPSModulePath\$ENV:BHProjectName.psm1"
 
-    # Module version bumped
+    ## Module version bumped
     # try {
 
     #     $Ver = Get-NextNugetPackageVersion -Name $ENV:BHProjectName -ErrorAction Stop
